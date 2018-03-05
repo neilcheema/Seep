@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 1.3
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">1.3</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used forserialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="strNoCardError">
+		<value>Please select a player card and seep cards(if required) for this function</value>
+	</data>
+	<data name="strInvalidError">
+		<value>Invalid Move becasue player 1 has not started the game yet</value>
+	</data>
+	<data name="strPickCardError1">
+		<value>You can not pick cards in middle becasue Player 1 has choosen: </value>
+	</data>
+		<data name="strPickCardError2">
+		<value>You can not pick cards in middle becasue cards in middle do not adds up to multiples of your card</value>
+	</data>
+		<data name="strThrowCardError1">
+		<value>You can not Throw this card in the middle becasue player 1 has choosen: </value>
+	</data>
+	<data name="strPileCardError1">
+		<value>You can not make this pile becasue you have choosen: </value>
+	</data>
+	<data name="strPileCardError2">
+		<value>You can not make this pile becasue you do not have a card to pick this pile</value>
+	</data>
+	<data name="strPileCardError3">
+		<value>You can not make this pile becasue pile Value is less than 9</value>
+	</data>
+	<data name="strPileCardError4">
+		<value>You can not make this pile becasue total value of cards excluding biggest card (over 9) is not multiple of biggest card(over 9)</value>
+	</data>
+	<data name="strPickPileError1">
+		<value>You did not select a pile to pick in the middle</value>
+	</data>
+	<data name="strPickPileError2">
+		<value>You can not pick this pile becasue pile Value and/or cards in the middle does not make up multiples of your card</value>
+	</data>
+		<data name="strAddPileError1">
+		<value>You can not Add Pile becasue you have not picked a pile to add to</value>
+	</data>
+	<data name="strAddPileError2">
+		<value>You can not Add Pile becasue player card and cards in the middle do not add up to multiples of pile you are adding to</value>
+	</data>
+	<data name="strAddPileError3">
+		<value>You can not Add Pile becasue total value of cards below 9 is not multiple of card greater than value 9 in this play</value>
+	</data>
+	<data name="strChangePileError1">
+		<value>You need to select one player card and a pile card</value>
+	</data>
+	<data name="strChangePileError2">
+		<value>You can not Add a Player card over 4 in face value</value>
+	</data>
+	<data name="strChangePileError3">
+		<value>You selected a pile card  that is not a pile</value>
+	</data>
+	<data name="strChangePileError4">
+		<value>You selected a pile that is FINAL and can not be changed</value>
+	</data>
+	<data name="strChangePileError5">
+		<value>Player card face value added to pile value can not be more than 13 in value</value>
+	</data>
+	<data name="strSeepPointError1">
+		<value>You need to select only a player card</value>
+	</data>
+	<data name="strSeepPointError2">
+		<value>Multiple Piles in the middle and it is not a seep situation</value>
+	</data>
+	<data name="strSeepPointError3">
+		<value>Pile in the middle is final and other cards in the middle, so it is not a seep situation</value>
+	</data>
+	<data name="strSeepPointError4">
+		<value>Pile and card in the middle are not multiple of player card, so it is not a seep situation</value>
+	</data>
+</root>

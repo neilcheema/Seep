@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A7E98E11-7F01-4660-9489-F1421133F6FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>twoPlayerSeep.frmSeep</StartupObject>
+    <RootNamespace>twoPlayerSeep</RootNamespace>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="clsCardDeck.vb" />
+    <Compile Include="clsHand.vb" />
+    <Compile Include="common.vb" />
+    <Compile Include="frmSeep.Designer.vb">
+      <DependentUpon>frmSeep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="errors.resx" />
+    <EmbeddedResource Include="images.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\b1fh.gif" />
+    <Content Include="images\b1fv.gif" />
+    <Content Include="images\b1pb.gif" />
+    <Content Include="images\b1pl.gif" />
+    <Content Include="images\b1pr.gif" />
+    <Content Include="images\b1pt.gif" />
+    <Content Include="images\b2fh.gif" />
+    <Content Include="images\b2fv.gif" />
+    <Content Include="images\b2pb.gif" />
+    <Content Include="images\b2pl.gif" />
+    <Content Include="images\b2pr.gif" />
+    <Content Include="images\b2pt.gif" />
+    <Content Include="images\c1.gif" />
+    <Content Include="images\c10.gif" />
+    <Content Include="images\c2.gif" />
+    <Content Include="images\c3.gif" />
+    <Content Include="images\c4.gif" />
+    <Content Include="images\c5.gif" />
+    <Content Include="images\c6.gif" />
+    <Content Include="images\c7.gif" />
+    <Content Include="images\c8.gif" />
+    <Content Include="images\c9.gif" />
+    <Content Include="images\cj.gif" />
+    <Content Include="images\ck.gif" />
+    <Content Include="images\cq.gif" />
+    <Content Include="images\d1.gif" />
+    <Content Include="images\d10.gif" />
+    <Content Include="images\d2.gif" />
+    <Content Include="images\d3.gif" />
+    <Content Include="images\d4.gif" />
+    <Content Include="images\d5.gif" />
+    <Content Include="images\d6.gif" />
+    <Content Include="images\d7.gif" />
+    <Content Include="images\d8.gif" />
+    <Content Include="images\d9.gif" />
+    <Content Include="images\dj.gif" />
+    <Content Include="images\dk.gif" />
+    <Content Include="images\dq.gif" />
+    <Content Include="images\ec.gif" />
+    <Content Include="images\h1.gif" />
+    <Content Include="images\h10.gif" />
+    <Content Include="images\h2.gif" />
+    <Content Include="images\h3.gif" />
+    <Content Include="images\h4.gif" />
+    <Content Include="images\h5.gif" />
+    <Content Include="images\h6.gif" />
+    <Content Include="images\h7.gif" />
+    <Content Include="images\h8.gif" />
+    <Content Include="images\h9.gif" />
+    <Content Include="images\hj.gif" />
+    <Content Include="images\hk.gif" />
+    <Content Include="images\hq.gif" />
+    <Content Include="images\jb.gif" />
+    <Content Include="images\jr.gif" />
+    <Content Include="images\s1.gif" />
+    <Content Include="images\s10.gif" />
+    <Content Include="images\s2.gif" />
+    <Content Include="images\s3.gif" />
+    <Content Include="images\s4.gif" />
+    <Content Include="images\s5.gif" />
+    <Content Include="images\s6.gif" />
+    <Content Include="images\s7.gif" />
+    <Content Include="images\s8.gif" />
+    <Content Include="images\s9.gif" />
+    <Content Include="images\sj.gif" />
+    <Content Include="images\sk.gif" />
+    <Content Include="images\sq.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

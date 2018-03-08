@@ -2409,6 +2409,9 @@
         ResetSeepHands()
         ResetPlayerScores()
         length = myHands.Count
+        If playerMove = 1 Or playerMove = 2 Then
+            MessageBox.Show("Please handover the screen output to other player first before clicking OK button", "Two Player Seep Game", MessageBoxButtons.OK)
+        End If
         For i As Integer = 0 To length - 1 Step 1
             Dim cardType As String = ConvertSuit(myHands.Item(i).Suit) + ConvertFace(myHands.Item(i).Face)
             Dim fileName As String

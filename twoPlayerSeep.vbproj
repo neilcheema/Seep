@@ -87,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="errors.resx" />
+    <EmbeddedResource Include="frmSeep.resx">
+      <DependentUpon>frmSeep.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="images.resx" />
   </ItemGroup>
   <ItemGroup>

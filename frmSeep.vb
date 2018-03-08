@@ -9,6 +9,7 @@
     Private firstCallNumber As String
     Private firstCallNumberSelected As Boolean
     Private firstMoveDone As Boolean
+    Private playerMove As Integer
     Private player1Score, player2Score As Integer
     Private player1SeriesScore, player2SeriesScore As Integer
     Public myDeck As clsCardDeck
@@ -160,34 +161,39 @@
         firstCallNumberSelected = True
         firstCallNumber = 9
         DisableEnableButtons()
+        Enable1Player()
     End Sub
 
     Private Sub btn10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn10.Click
         firstCallNumberSelected = True
         firstCallNumber = 10
         DisableEnableButtons()
+        Enable1Player()
     End Sub
 
     Private Sub btn11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn11.Click
         firstCallNumberSelected = True
         firstCallNumber = 11
         DisableEnableButtons()
+        Enable1Player()
     End Sub
 
     Private Sub btn12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn12.Click
         firstCallNumberSelected = True
         firstCallNumber = 12
         DisableEnableButtons()
+        Enable1Player()
     End Sub
 
     Private Sub btn13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn13.Click
         firstCallNumberSelected = True
         firstCallNumber = 13
         DisableEnableButtons()
+        Enable1Player()
     End Sub
 
 
-    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub frmSeep_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         reset()
 
@@ -288,9 +294,10 @@
         If result = 1 Then
             isFirstMoveDone()
             PickCardPlayer1(temp)
-            RefreshHands()
             player1Moves = player1Moves + 1
             lastPlayerPicking = 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -324,9 +331,10 @@
         Dim result As Integer = pickCardValidates(temp, 2)
         If result = 1 Then
             PickCardPlayer2(temp)
-            RefreshHands()
             player2Moves = player2Moves + 1
             lastPlayerPicking = 2
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -362,8 +370,9 @@
         If result = 1 Then
             isFirstMoveDone()
             PileCardPlayer1(temp)
-            RefreshHands()
             player1Moves = player1Moves + 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -405,8 +414,9 @@
         Dim result As Integer = pileCardValidates(temp, 2)
         If result = 1 Then
             PileCardPlayer2(temp)
-            RefreshHands()
             player2Moves = player2Moves + 1
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -450,9 +460,10 @@
         Dim result As Integer = pickPileValidates(temp, 1)
         If result = 1 Then
             PickPilePlayer1(temp)
-            RefreshHands()
             player1Moves = player1Moves + 1
             lastPlayerPicking = 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -490,9 +501,10 @@
         Dim result As Integer = pickPileValidates(temp, 2)
         If result = 1 Then
             PickPilePlayer2(temp)
-            RefreshHands()
             player2Moves = player2Moves + 1
             lastPlayerPicking = 2
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -531,8 +543,9 @@
         If result = 1 Then
             isFirstMoveDone()
             ThrowCard(cmdString.TrimEnd.TrimStart, 1)
-            RefreshHands()
             player1Moves = player1Moves + 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -560,8 +573,9 @@
 
         If result = 1 Then
             ThrowCard(cmdString.TrimEnd.TrimStart, 2)
-            RefreshHands()
             player2Moves = player2Moves + 1
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -590,8 +604,9 @@
         Dim result As Integer = addPileValidates(temp, 1)
         If result = 1 Then
             AddPilePlayer1(temp)
-            RefreshHands()
             player1Moves = player1Moves + 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -635,8 +650,9 @@
         Dim result As Integer = addPileValidates(temp, 2)
         If result = 1 Then
             AddPilePlayer2(temp)
-            RefreshHands()
             player2Moves = player2Moves + 1
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -679,8 +695,9 @@
         Dim result As Integer = changePileValidates(temp, 1)
         If result = 1 Then
             ChangePile(temp, 1)
-            RefreshHands()
             player1Moves = player1Moves + 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -734,8 +751,9 @@
         Dim result As Integer = changePileValidates(temp, 2)
         If result = 1 Then
             ChangePile(temp, 2)
-            RefreshHands()
             player2Moves = player2Moves + 1
+            Enable1Player()
+            RefreshHands()
             If player2Moves = 8 OrElse player2Moves = 16 OrElse player2Moves = 24 Then ReDealCards()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
@@ -788,8 +806,9 @@
         Dim result As Integer = seepPointValidates(temp, 1)
         If result = 1 Then
             SeepPoints(cmdString.TrimEnd.TrimStart, 1)
-            RefreshHands()
             player1Moves = player1Moves + 1
+            Enable2Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -838,9 +857,9 @@
         Dim result As Integer = seepPointValidates(temp, 2)
         If result = 1 Then
             SeepPoints(cmdString.TrimEnd.TrimStart, 2)
-            RefreshHands()
             player2Moves = player2Moves + 1
-
+            Enable1Player()
+            RefreshHands()
         ElseIf result = 2 Then
             Dim rm As New Resources.ResourceManager("twoPlayerSeep.errors", System.Reflection.Assembly.GetExecutingAssembly)
             Dim strError As String = rm.GetObject("strNoCardError")
@@ -963,16 +982,20 @@
                         Dim tempImage As Image = rm.GetObject(fileName)
                         Select Case card
                             Case 1
-                                Player2Card1.Image = tempImage
+                                'Player2Card1.Image = tempImage
+                                rm.GetObject("b1fv.gif")
                                 Player2Card1.Text = cardType.ToUpper
                             Case 2
-                                player2Card2.Image = tempImage
+                                'player2Card2.Image = tempImage
+                                rm.GetObject("b1fv.gif")
                                 player2Card2.Text = cardType.ToUpper
                             Case 3
-                                player2card3.Image = tempImage
+                                'player2card3.Image = tempImage
+                                rm.GetObject("b1fv.gif")
                                 player2card3.Text = cardType.ToUpper
                             Case 4
-                                player2Card4.Image = tempImage
+                                'player2Card4.Image = tempImage
+                                rm.GetObject("b1fv.gif")
                                 player2Card4.Text = cardType.ToUpper
                             Case 5
                                 Player2Card5.Image = rm.GetObject("b1fv.gif")
@@ -1113,12 +1136,16 @@
                 MessageBox.Show("Game Over! Player 1 the winner", "Two Player Seep Game", MessageBoxButtons.OK)
                 btnStart.Enabled = False
                 DisableEnableButtons()
+                resetHandsAndPiles()
+                reset()
                 Exit Sub
             End If
             If player2SeriesScore >= 101 Then
-                MessageBox.Show("Game Over1 Player 2 the winner", "Two Player Seep Game", MessageBoxButtons.OK)
+                MessageBox.Show("Game Over! Player 2 the winner", "Two Player Seep Game", MessageBoxButtons.OK)
                 btnStart.Enabled = False
                 DisableEnableButtons()
+                resetHandsAndPiles()
+                reset()
                 Exit Sub
             End If
             resetHandsAndPiles()
@@ -1134,77 +1161,9 @@
                 yourHands = myDeck.Deal(8, common.Player.Two, False)
             End If
 
-            For card As Integer = 1 To 8
-                Dim fileName, cardType As String
-                Select Case player
 
-                    Case 1
-                        cardType = ConvertSuit(myHands.Item(card - 1).Suit) + ConvertFace(myHands.Item(card - 1).Face)
-                        'split the string will be in the format ("Suit.Face")
-                        fileName = cardType + ".gif"
-                        Dim tempImage As Image = rm.GetObject(fileName)
-                        Select Case card
-                            Case 1
-                                player1Card1.Image = tempImage
-                                player1Card1.Text = cardType.ToUpper
-                            Case 2
-                                player1card2.Image = tempImage
-                                player1card2.Text = cardType.ToUpper
-                            Case 3
-                                player1Card3.Image = tempImage
-                                player1Card3.Text = cardType.ToUpper
-                            Case 4
-                                player1Card4.Image = tempImage
-                                player1Card4.Text = cardType.ToUpper
-                            Case 5
-                                Player1Card5.Image = tempImage
-                                Player1Card5.Text = cardType.ToUpper
-                            Case 6
-                                Player1Card6.Image = tempImage
-                                Player1Card6.Text = cardType.ToUpper
-                            Case 7
-                                Player1Card7.Image = tempImage
-                                Player1Card7.Text = cardType.ToUpper
-                            Case 8
-                                Player1Card8.Image = tempImage
-                                Player1Card8.Text = cardType.ToUpper
-                        End Select
-
-                    Case 2
-                        cardType = ConvertSuit(yourHands.Item(card - 1).Suit) + ConvertFace(yourHands.Item(card - 1).Face)
-                        'split the string will be in the format ("Suit.Face")
-                        fileName = cardType + ".gif"
-                        Dim tempImage As Image = rm.GetObject(fileName)
-                        Select Case card
-                            Case 1
-                                Player2Card1.Image = tempImage
-                                Player2Card1.Text = cardType.ToUpper
-                            Case 2
-                                player2Card2.Image = tempImage
-                                player2Card2.Text = cardType.ToUpper
-                            Case 3
-                                player2card3.Image = tempImage
-                                player2card3.Text = cardType.ToUpper
-                            Case 4
-                                player2Card4.Image = tempImage
-                                player2Card4.Text = cardType.ToUpper
-                            Case 5
-                                Player2Card5.Image = tempImage
-                                Player2Card5.Text = cardType.ToUpper
-                            Case 6
-                                Player2Card6.Image = tempImage
-                                Player2Card6.Text = cardType.ToUpper
-                            Case 7
-                                Player2Card7.Image = tempImage
-                                Player2Card7.Text = cardType.ToUpper
-                            Case 8
-                                Player2Card8.Image = tempImage
-                                Player2Card8.Text = cardType.ToUpper
-                        End Select
-
-                End Select
-            Next
         Next
+        RefreshHands()
     End Sub
 
     Private Sub AddNewSeepCard(ByVal cardNumber As String)
@@ -2452,7 +2411,12 @@
         length = myHands.Count
         For i As Integer = 0 To length - 1 Step 1
             Dim cardType As String = ConvertSuit(myHands.Item(i).Suit) + ConvertFace(myHands.Item(i).Face)
-            Dim fileName As String = cardType + ".gif"
+            Dim fileName As String
+            If playerMove = 1 Then
+                fileName = cardType + ".gif"
+            Else
+                fileName = "b1fv.gif"
+            End If
             SetMyCardImages(i, fileName, cardType)
         Next i
         length = seepHands.Count
@@ -2502,7 +2466,12 @@
         length = yourHands.Count
         For i As Integer = 0 To length - 1 Step 1
             Dim cardType As String = ConvertSuit(yourHands.Item(i).Suit) + ConvertFace(yourHands.Item(i).Face)
-            Dim fileName As String = cardType + ".gif"
+            Dim fileName As String
+            If playerMove = 2 Then
+                fileName = cardType + ".gif"
+            Else
+                fileName = "b1fv.gif"
+            End If
             SetYourCardImages(i, fileName, cardType)
         Next i
 
@@ -2614,6 +2583,43 @@
         Me.btnSeepPoints2.Enabled = False
         Me.btnThrowCard1.Enabled = False
         Me.btnThrowCard2.Enabled = False
+    End Sub
+    Private Sub Enable2Player()
+        Me.btnAddPile1.Enabled = False
+        Me.btnChangePile1.Enabled = False
+        Me.btnCreatePile1.Enabled = False
+        Me.btnPickCard1.Enabled = False
+        Me.btnPickPile1.Enabled = False
+        Me.btnSeepPoints1.Enabled = False
+        Me.btnThrowCard1.Enabled = False
+        Me.btnAddPile2.Enabled = True
+        Me.btnChangePile2.Enabled = True
+        Me.btnCreatePile2.Enabled = True
+        Me.btnPickCard2.Enabled = True
+        Me.btnPickPile2.Enabled = True
+        Me.btnSeepPoints2.Enabled = True
+        Me.btnThrowCard2.Enabled = True
+        playerMove = 2
+
+
+    End Sub
+    Private Sub Enable1Player()
+        Me.btnAddPile2.Enabled = False
+        Me.btnChangePile2.Enabled = False
+        Me.btnCreatePile2.Enabled = False
+        Me.btnPickCard2.Enabled = False
+        Me.btnPickPile2.Enabled = False
+        Me.btnSeepPoints2.Enabled = False
+        Me.btnThrowCard2.Enabled = False
+        Me.btnAddPile1.Enabled = True
+        Me.btnChangePile1.Enabled = True
+        Me.btnCreatePile1.Enabled = True
+        Me.btnPickCard1.Enabled = True
+        Me.btnPickPile1.Enabled = True
+        Me.btnSeepPoints1.Enabled = True
+        Me.btnThrowCard1.Enabled = True
+        playerMove = 1
+
     End Sub
     Private Sub SetMyCardImages(ByVal index As Integer, ByVal fileName As String, ByVal cardType As String)
         Dim rm As New Resources.ResourceManager("twoPlayerSeep.images", System.Reflection.Assembly.GetExecutingAssembly)
@@ -3282,6 +3288,11 @@
         Return 1
 
     End Function
+
+    Private Sub btnDeal_Click(sender As Object, e As EventArgs) Handles btnDeal.Click
+
+    End Sub
+
     Private Function addPileValidates(ByRef temp() As String, ByVal player As Integer) As Integer
 
         If temp(0).Substring(0, 1) = "E" Then

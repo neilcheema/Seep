@@ -113,101 +113,124 @@ Partial Class frmSeep
     Friend WithEvents lblPlayer2SeriesScore As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "frmSeep"
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer2Score = New System.Windows.Forms.Label
-        Me.btn13 = New System.Windows.Forms.Button
-        Me.btn12 = New System.Windows.Forms.Button
-        Me.btn11 = New System.Windows.Forms.Button
-        Me.btn10 = New System.Windows.Forms.Button
-        Me.btn9 = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.btnDeal = New System.Windows.Forms.Button
-        Me.btnStart = New System.Windows.Forms.Button
-        Me.deck = New System.Windows.Forms.PictureBox
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer1Score = New System.Windows.Forms.Label
-        Me.Player1Card8 = New System.Windows.Forms.PictureBox
-        Me.Player1Card7 = New System.Windows.Forms.PictureBox
-        Me.Player1Card6 = New System.Windows.Forms.PictureBox
-        Me.Player1Card5 = New System.Windows.Forms.PictureBox
-        Me.player1Card4 = New System.Windows.Forms.PictureBox
-        Me.player1Card3 = New System.Windows.Forms.PictureBox
-        Me.player1card2 = New System.Windows.Forms.PictureBox
-        Me.player1Card1 = New System.Windows.Forms.PictureBox
-        Me.Player2Card8 = New System.Windows.Forms.PictureBox
-        Me.Player2Card7 = New System.Windows.Forms.PictureBox
-        Me.Player2Card6 = New System.Windows.Forms.PictureBox
-        Me.Player2Card5 = New System.Windows.Forms.PictureBox
-        Me.player2Card4 = New System.Windows.Forms.PictureBox
-        Me.player2card3 = New System.Windows.Forms.PictureBox
-        Me.player2Card2 = New System.Windows.Forms.PictureBox
-        Me.Player2Card1 = New System.Windows.Forms.PictureBox
-        Me.seepCard4 = New System.Windows.Forms.PictureBox
-        Me.seepCard3 = New System.Windows.Forms.PictureBox
-        Me.seepCard2 = New System.Windows.Forms.PictureBox
-        Me.seepCard1 = New System.Windows.Forms.PictureBox
-        Me.txtPlayer1 = New System.Windows.Forms.TextBox
-        Me.txtPlayer2 = New System.Windows.Forms.TextBox
-        Me.seepCard5 = New System.Windows.Forms.PictureBox
-        Me.seepCard6 = New System.Windows.Forms.PictureBox
-        Me.seepCard7 = New System.Windows.Forms.PictureBox
-        Me.seepCard8 = New System.Windows.Forms.PictureBox
+        Me.components = New System.ComponentModel.Container()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer2Score = New System.Windows.Forms.Label()
+        Me.btn13 = New System.Windows.Forms.Button()
+        Me.btn12 = New System.Windows.Forms.Button()
+        Me.btn11 = New System.Windows.Forms.Button()
+        Me.btn10 = New System.Windows.Forms.Button()
+        Me.btn9 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnDeal = New System.Windows.Forms.Button()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.deck = New System.Windows.Forms.PictureBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer1Score = New System.Windows.Forms.Label()
+        Me.Player1Card8 = New System.Windows.Forms.PictureBox()
+        Me.Player1Card7 = New System.Windows.Forms.PictureBox()
+        Me.Player1Card6 = New System.Windows.Forms.PictureBox()
+        Me.Player1Card5 = New System.Windows.Forms.PictureBox()
+        Me.player1Card4 = New System.Windows.Forms.PictureBox()
+        Me.player1Card3 = New System.Windows.Forms.PictureBox()
+        Me.player1card2 = New System.Windows.Forms.PictureBox()
+        Me.player1Card1 = New System.Windows.Forms.PictureBox()
+        Me.Player2Card8 = New System.Windows.Forms.PictureBox()
+        Me.Player2Card7 = New System.Windows.Forms.PictureBox()
+        Me.Player2Card6 = New System.Windows.Forms.PictureBox()
+        Me.Player2Card5 = New System.Windows.Forms.PictureBox()
+        Me.player2Card4 = New System.Windows.Forms.PictureBox()
+        Me.player2card3 = New System.Windows.Forms.PictureBox()
+        Me.player2Card2 = New System.Windows.Forms.PictureBox()
+        Me.Player2Card1 = New System.Windows.Forms.PictureBox()
+        Me.seepCard4 = New System.Windows.Forms.PictureBox()
+        Me.seepCard3 = New System.Windows.Forms.PictureBox()
+        Me.seepCard2 = New System.Windows.Forms.PictureBox()
+        Me.seepCard1 = New System.Windows.Forms.PictureBox()
+        Me.txtPlayer1 = New System.Windows.Forms.TextBox()
+        Me.txtPlayer2 = New System.Windows.Forms.TextBox()
+        Me.seepCard5 = New System.Windows.Forms.PictureBox()
+        Me.seepCard6 = New System.Windows.Forms.PictureBox()
+        Me.seepCard7 = New System.Windows.Forms.PictureBox()
+        Me.seepCard8 = New System.Windows.Forms.PictureBox()
         Me.ttPlayer1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.btnReset = New System.Windows.Forms.Button
-        Me.lblSeepCard1 = New System.Windows.Forms.Label
-        Me.lblSeepCard2 = New System.Windows.Forms.Label
-        Me.lblSeepCard3 = New System.Windows.Forms.Label
-        Me.lblSeepCard4 = New System.Windows.Forms.Label
-        Me.lblSeepCard5 = New System.Windows.Forms.Label
-        Me.lblSeepCard6 = New System.Windows.Forms.Label
-        Me.lblSeepCard7 = New System.Windows.Forms.Label
-        Me.lblSeepCard8 = New System.Windows.Forms.Label
-        Me.lblSeepCard1Value = New System.Windows.Forms.Label
-        Me.lblSeepCard2Value = New System.Windows.Forms.Label
-        Me.lblSeepCard3Value = New System.Windows.Forms.Label
-        Me.lblSeepCard4Value = New System.Windows.Forms.Label
-        Me.lblSeepCard5Value = New System.Windows.Forms.Label
-        Me.lblSeepCard6Value = New System.Windows.Forms.Label
-        Me.lblSeepCard7Value = New System.Windows.Forms.Label
-        Me.lblSeepCard8Value = New System.Windows.Forms.Label
-        Me.btnPickCard1 = New System.Windows.Forms.Button
-        Me.btnCreatePile1 = New System.Windows.Forms.Button
-        Me.btnPickPile1 = New System.Windows.Forms.Button
-        Me.btnAddPile1 = New System.Windows.Forms.Button
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.btnThrowCard1 = New System.Windows.Forms.Button
-        Me.btnThrowCard2 = New System.Windows.Forms.Button
-        Me.btnPickCard2 = New System.Windows.Forms.Button
-        Me.btnCreatePile2 = New System.Windows.Forms.Button
-        Me.btnPickPile2 = New System.Windows.Forms.Button
-        Me.btnAddPile2 = New System.Windows.Forms.Button
-        Me.btnChangePile1 = New System.Windows.Forms.Button
-        Me.btnChangePile2 = New System.Windows.Forms.Button
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.btnSeepPoints1 = New System.Windows.Forms.Button
-        Me.btnSeepPoints2 = New System.Windows.Forms.Button
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer1Seep = New System.Windows.Forms.Label
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer2Seep = New System.Windows.Forms.Label
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer1SeriesScore = New System.Windows.Forms.Label
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox
-        Me.lblPlayer2SeriesScore = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.lblSeepCard1 = New System.Windows.Forms.Label()
+        Me.lblSeepCard2 = New System.Windows.Forms.Label()
+        Me.lblSeepCard3 = New System.Windows.Forms.Label()
+        Me.lblSeepCard4 = New System.Windows.Forms.Label()
+        Me.lblSeepCard5 = New System.Windows.Forms.Label()
+        Me.lblSeepCard6 = New System.Windows.Forms.Label()
+        Me.lblSeepCard7 = New System.Windows.Forms.Label()
+        Me.lblSeepCard8 = New System.Windows.Forms.Label()
+        Me.lblSeepCard1Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard2Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard3Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard4Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard5Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard6Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard7Value = New System.Windows.Forms.Label()
+        Me.lblSeepCard8Value = New System.Windows.Forms.Label()
+        Me.btnPickCard1 = New System.Windows.Forms.Button()
+        Me.btnCreatePile1 = New System.Windows.Forms.Button()
+        Me.btnPickPile1 = New System.Windows.Forms.Button()
+        Me.btnAddPile1 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnThrowCard1 = New System.Windows.Forms.Button()
+        Me.btnThrowCard2 = New System.Windows.Forms.Button()
+        Me.btnPickCard2 = New System.Windows.Forms.Button()
+        Me.btnCreatePile2 = New System.Windows.Forms.Button()
+        Me.btnPickPile2 = New System.Windows.Forms.Button()
+        Me.btnAddPile2 = New System.Windows.Forms.Button()
+        Me.btnChangePile1 = New System.Windows.Forms.Button()
+        Me.btnChangePile2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnSeepPoints1 = New System.Windows.Forms.Button()
+        Me.btnSeepPoints2 = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer1Seep = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer2Seep = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer1SeriesScore = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.lblPlayer2SeriesScore = New System.Windows.Forms.Label()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.deck, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.Player1Card8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1Card7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1Card6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player1Card5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player1Card4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player1Card3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player1card2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player1Card1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2Card8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2Card7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2Card6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2Card5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player2Card4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player2card3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.player2Card2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Player2Card1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.seepCard8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -534,10 +557,6 @@ Partial Class frmSeep
         Me.seepCard8.TabIndex = 47
         Me.seepCard8.TabStop = False
         '
-        'ttPlayer1
-        '
-
-        '
         'Label1
         '
         Me.Label1.Location = New System.Drawing.Point(200, 264)
@@ -576,7 +595,7 @@ Partial Class frmSeep
         Me.Label5.Size = New System.Drawing.Size(504, 24)
         Me.Label5.TabIndex = 53
         Me.Label5.Text = "1:"" Player Card Type ""+"" Seep Card Type"" + more seep card types ""+"" in middle ---" &
-        "> Pick Cards"
+    "> Pick Cards"
         '
         'Label6
         '
@@ -587,8 +606,8 @@ Partial Class frmSeep
         Me.Label6.Size = New System.Drawing.Size(488, 48)
         Me.Label6.TabIndex = 54
         Me.Label6.Text = "Card Type = suit + face value For example for King of Spade card type =  s13, for" &
-        " Queen of hearts card type =  h12,  for jack of club card type = c11 and for Ace" &
-        " of diamond card type = d1"
+    " Queen of hearts card type =  h12,  for jack of club card type = c11 and for Ace" &
+    " of diamond card type = d1"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label7
@@ -600,7 +619,7 @@ Partial Class frmSeep
         Me.Label7.Size = New System.Drawing.Size(560, 14)
         Me.Label7.TabIndex = 55
         Me.Label7.Text = "2: "" Player Card Type ""+"" Seep Card Type ""+"" more seep card types ""+"" in middle -" &
-        "--> Create Pile"
+    "--> Create Pile"
         '
         'Label8
         '
@@ -611,7 +630,7 @@ Partial Class frmSeep
         Me.Label8.Size = New System.Drawing.Size(560, 18)
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "3: ""Player Card Type ""+""Seep Card Types"" ""+"" in middle and ""Seep Card in pile"" at" &
-        " last  ---> Pick Pile"
+    " last  ---> Pick Pile"
         '
         'Label9
         '
@@ -627,6 +646,7 @@ Partial Class frmSeep
         '
         Me.btnReset.Location = New System.Drawing.Point(64, 280)
         Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
         Me.btnReset.TabIndex = 58
         Me.btnReset.Text = "RESET"
         '
@@ -807,7 +827,7 @@ Partial Class frmSeep
         Me.Label10.Size = New System.Drawing.Size(560, 16)
         Me.Label10.TabIndex = 79
         Me.Label10.Text = "4: ""Player Card Type"" + ""Seep Card Types"" ""+"" in middle and ""Seep Card in pile"" a" &
-        "t last  ---> Add Pile"
+    "t last  ---> Add Pile"
         '
         'btnThrowCard1
         '
@@ -997,10 +1017,11 @@ Partial Class frmSeep
         Me.lblPlayer2SeriesScore.Size = New System.Drawing.Size(80, 24)
         Me.lblPlayer2SeriesScore.TabIndex = 8
         '
-        'frmMain
+        'frmSeep
         '
         Me.AllowDrop = True
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 938)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnSeepPoints2)
@@ -1085,15 +1106,41 @@ Partial Class frmSeep
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox6)
-        Me.Name = "frmMain"
+        Me.Name = "frmSeep"
         Me.Text = "Two Player Seep"
         Me.GroupBox5.ResumeLayout(False)
+        CType(Me.deck, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.Player1Card8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1Card7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1Card6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player1Card5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player1Card4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player1Card3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player1card2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player1Card1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2Card8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2Card7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2Card6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2Card5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player2Card4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player2card3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.player2Card2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Player2Card1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.seepCard8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox6.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 End Class
